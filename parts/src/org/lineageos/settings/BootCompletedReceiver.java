@@ -28,6 +28,7 @@ import org.lineageos.settings.doze.DozeUtils;
 import org.lineageos.settings.popupcamera.PopupCameraUtils;
 import org.lineageos.settings.thermal.ThermalUtils;
 import org.lineageos.settings.refreshrate.RefreshUtils;
+import org.lineageos.settings.utils.FileUtils;
 
 public class BootCompletedReceiver extends BroadcastReceiver {
 
@@ -47,5 +48,6 @@ public class BootCompletedReceiver extends BroadcastReceiver {
         PopupCameraUtils.checkPopupCameraService(context);
         ThermalUtils.startService(context);
         RefreshUtils.startService(context);
+        FileUtils.enableService(context);
     }
 }
